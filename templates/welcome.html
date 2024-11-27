@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Hoş Geldiniz! - Anket</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            color: #4CAF50;
+            text-align: center;
+        }
+        .question {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+        .answer {
+            margin-top: 10px;
+        }
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Holland Mesleki Tercih Envanteri</h1>
+        <p>Bu ölçek, yetenek ve ilgilerinizi daha iyi tanımanıza ve bu yolla okul ve ders seçiminize yardımcı olmak amacıyla geliştirilmiştir. Kendinize en uygun olduğunu düşündüğünüz cevabı işaretleyin.</p>
+
+        <form action="#" method="POST">
+            <!-- Sorular -->
+            <div class="question">
+                <p>1- Kuşların nasıl göç ettiğini öğrenmek</p>
+                <div class="answer">
+                    <label><input type="radio" name="q1" value="Hoşlanmam"> Hoşlanmam</label><br>
+                    <label><input type="radio" name="q1" value="Farketmez"> Farketmez</label><br>
+                    <label><input type="radio" name="q1" value="Hoşlanırım"> Hoşlanırım</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>2- İnsanlara yeni bir hobi öğretmek</p>
+                <div class="answer">
+                    <label><input type="radio" name="q2" value="Hoşlanmam"> Hoşlanmam</label><br>
+                    <label><input type="radio" name="q2" value="Farketmez"> Farketmez</label><br>
+                    <label><input type="radio" name="q2" value="Hoşlanırım"> Hoşlanırım</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>3- Hava durumu tahmini için kişisel gözlemlerimi kullanmak</p>
+                <div class="answer">
+                    <label><input type="radio" name="q3" value="Hoşlanmam"> Hoşlanmam</label><br>
+                    <label><input type="radio" name="q3" value="Farketmez"> Farketmez</label><br>
+                    <label><input type="radio" name="q3" value="Hoşlanırım"> Hoşlanırım</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>4- Bitki hastalıklarını incelemek</p>
+                <div class="answer">
+                    <label><input type="radio" name="q4" value="Hoşlanmam"> Hoşlanmam</label><br>
+                    <label><input type="radio" name="q4" value="Farketmez"> Farketmez</label><br>
+                    <label><input type="radio" name="q4" value="Hoşlanırım"> Hoşlanırım</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>5- Bankaya yatırılan paranın faizini hesaplamak</p>
+                <div class="answer">
+                    <label><input type="radio" name="q5" value="Hoşlanmam"> Hoşlanmam</label><br>
+                    <label><input type="radio" name="q5" value="Farketmez"> Farketmez</label><br>
+                    <label><input type="radio" name="q5" value="Hoşlanırım"> Hoşlanırım</label>
+                </div>
+            </div>
+
+            <!-- Yeni Sorular -->
+            <div class="question">
+                <p>6- Resimler tasarlamak ve çizmek</p>
+                <div class="answer">
+                    <label><input type="radio" name="q6" value="Hoşlanmam"> Hoşlanmam</label><br>
+                    <label><input type="radio" name="q6" value="Farketmez"> Farketmez</label><br>
+                    <label><input type="radio" name="q6" value="Hoşlanırım"> Hoşlanırım</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>7- Bir iş yaptırmak için parayla adam tutmak</p>
+                <div class="answer">
+                    <label><input type="radio" name="q7" value="Hoşlanmam"> Hoşlanmam</label><br>
+                    <label><input type="radio" name="q7" value="Farketmez"> Farketmez</label><br>
+                    <label><input type="radio" name="q7" value="Hoşlanırım"> Hoşlanırım</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>8- Bir bilim müzesini incelemek</p>
+                <div class="answer">
+                    <label><input type="radio" name="q8" value="Hoşlanmam"> Hoşlanmam</label><br>
+                    <label><input type="radio" name="q8" value="Farketmez"> Farketmez</label><br>
+                    <label><input type="radio" name="q8" value="Hoşlanırım"> Hoşlanırım</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>9- Gözlük için mercekleri parlatmak</p>
+                <div class="answer">
+                    <label><input type="radio" name="q9" value="Hoşlanmam"> Hoşlanmam</label><br>
+                    <label><input type="radio" name="q9" value="Farketmez"> Farketmez</label><br>
+                    <label><input type="radio" name="q9" value="Hoşlanırım"> Hoşlanırım</label>
+                </div>
+            </div>
+
+            <!-- Diğer Sorular Eklenebilir -->
+            <div class="question">
+                <p>10- Modern yazarların yazı stillerini araştırmak</p>
+                <div class="answer">
+                    <label><input type="radio" name="q10" value="Hoşlanmam"> Hoşlanmam</label><br>
+                    <label><input type="radio" name="q10" value="Farketmez"> Farketmez</label><br>
+                    <label><input type="radio" name="q10" value="Hoşlanırım"> Hoşlanırım</label>
+                </div>
+            </div>
+  <div class="question">
+           <p>27-  Kusurları bulmak için mamulleri incelemek</p>
+           <div class="answer">
+               <label><input type="radio" name="q27" value="Hoşlanmam"> Hoşlanmam</label><br>
+               <label><input type="radio" name="q27" value="Farketmez"> Farketmez</label><br>
+               <label><input type="radio" name="q27" value="Hoşlanırım"> Hoşlanırım</label>
+           </div>
+       </div>
+             <div class="question">
+           <p>28-  Telefonla iş idare etmek</p>
+           <div class="answer">
+               <label><input type="radio" name="q28" value="Hoşlanmam"> Hoşlanmam</label><br>
+               <label><input type="radio" name="q28" value="Farketmez"> Farketmez</label><br>
+               <label><input type="radio" name="q28" value="Hoşlanırım"> Hoşlanırım</label>
+           </div>
+       </div>
+
+             <div class="question">
+           <p>29-  Acil durumlarda insanlara yardım etmek</p>
+           <div class="answer">
+               <label><input type="radio" name="q29" value="Hoşlanmam"> Hoşlanmam</label><br>
+               <label><input type="radio" name="q29" value="Farketmez"> Farketmez</label><br>
+               <label><input type="radio" name="q29" value="Hoşlanırım"> Hoşlanırım</label>
+           </div>
+       </div>
+ <div class="question">
+           <p>30- Bir kuruluşun parayla ilgili bütün işlerini idare etmek</p>
+           <div class="answer">
+               <label><input type="radio" name="q30" value="Hoşlanmam"> Hoşlanmam</label><br>
+               <label><input type="radio" name="q30" value="Farketmez"> Farketmez</label><br>
+               <label><input type="radio" name="q30" value="Hoşlanırım"> Hoşlanırım</label>
+           </div>
+       </div>
+ <div class="question">
+           <p>31- Müzik eseri bestelemek veya düzenlemek</p>
+           <div class="answer">
+               <label><input type="radio" name="q31" value="Hoşlanmam"> Hoşlanmam</label><br>
+               <label><input type="radio" name="q31" value="Farketmez"> Farketmez</label><br>
+               <label><input type="radio" name="q31" value="Hoşlanırım"> Hoşlanırım</label>
+           </div>
+       </div>
+ <div class="question">
+           <p>32- Filmler için konu müziği bestelemek</p>
+           <div class="answer">
+               <label><input type="radio" name="q32" value="Hoşlanmam"> Hoşlanmam</label><br>
+               <label><input type="radio" name="q32" value="Farketmez"> Farketmez</label><br>
+               <label><input type="radio" name="q32" value="Hoşlanırım"> Hoşlanırım</label>
+           </div>
+       </div>
+ <div class="question">
+           <p>33- Yeni kurallar veya politikalar geliştirmek</p>
+           <div class="answer">
+               <label><input type="radio" name="q33" value="Hoşlanmam"> Hoşlanmam</label><br>
+               <label><input type="radio" name="q33" value="Farketmez"> Farketmez</label><br>
+               <label><input type="radio" name="q33" value="Hoşlanırım"> Hoşlanırım</label>
+           </div>
+       </div>
+ <div class="question">
+           <p>34- Biyoloji çalışmak</p>
+           <div class="answer">
+               <label><input type="radio" name="q34" value="Hoşlanmam"> Hoşlanmam</label><br>
+               <label><input type="radio" name="q34" value="Farketmez"> Farketmez</label><br>
+               <label><input type="radio" name="q34" value="Hoşlanırım"> Hoşlanırım</label>
+           </div>
+       </div>
+ <div class="question">
+           <p>35- Politik bir kurum için kampanyaya katılmak</p>
+           <div class="answer">
+               <label><input type="radio" name="q35" value="Hoşlanmam"> Hoşlanmam</label><br>
+               <label><input type="radio" name="q35" value="Farketmez"> Farketmez</label><br>
+               <label><input type="radio" name="q36" value="Hoşlanırım"> Hoşlanırım</label>
+           </div>
+       </div>
+ <div class="question">
+           <p>36- Maddeleri ayırmak, biriktirmek ve saklamak</p>
+           <div class="answer">
+               <label><input type="radio" name="q37" value="Hoşlanmam"> Hoşlanmam</label><br>
+               <label><input type="radio" name="q37" value="Farketmez"> Farketmez</label><br>
+               <label><input type="radio" name="q37" value="Hoşlanırım"> Hoşlanırım</label>
+           </div>
+       </div>
+ <div class="question">
+           <p>37- Bir toplum geliştirme projesinde çalışmak</p>
+           <div class="answer">
+               <label><input type="radio" name="q38" value="Hoşlanmam"> Hoşlanmam</label><br>
+               <label><input type="radio" name="q38" value="Farketmez"> Farketmez</label><br>
+               <label><input type="radio" name="q38" value="Hoşlanırım"> Hoşlanırım</label>
+           </div>
+       </div>
+ <div class="question">
+           <p>38- Bir daktilonun nasıl tamir edileceğini öğrenmek</p>
+           <div class="answer">
+               <label><input type="radio" name="q39" value="Hoşlanmam"> Hoşlanmam</label><br>
+               <label><input type="radio" name="q39" value="Farketmez"> Farketmez</label><br>
+               <label><input type="radio" name="q39" value="Hoşlanırım"> Hoşlanırım</label>
+           </div>
+       </div>
+ <div class="question">
+           <p>39- Dünya’nın merkezi, güneş ve yıldızlar hakkında kitaplar okumak</p>
+           <div class="answer">
+               <label><input type="radio" name="q40" value="Hoşlanmam"> Hoşlanmam</label><br>
+               <label><input type="radio" name="q40" value="Farketmez"> Farketmez</label><br>
+               <label><input type="radio" name="q40" value="Hoşlanırım"> Hoşlanırım</label>
+           </div>
+       </div>
+ <div class="question">
+           <p>40- Tam doğru zaman tutmak için bir saati ayarlamak</p>
+           <div class="answer">
+               <label><input type="radio" name="q41" value="Hoşlanmam"> Hoşlanmam</label><br>
+               <label><input type="radio" name="q41" value="Farketmez"> Farketmez</label><br>
+               <label><input type="radio" name="q41" value="Hoşlanırım"> Hoşlanırım</label>
+           </div>
+       </div>
+ <div class="question">
+           <p>41- Beynin nasıl çalıştığını öğrenmek</p>
+           <div class="answer">
+               <label><input type="radio" name="q42" value="Hoşlanmam"> Hoşlanmam</label><br>
+               <label><input type="radio" name="q42" value="Farketmez"> Farketmez</label><br>
+               <label><input type="radio" name="q42" value="Hoşlanırım"> Hoşlanırım</label>
+           </div>
+       </div>
+ <div class="question">
+           <p>42- Yaratıcı fotoğraflar çekmek</p>
+           <div class="answer">
+               <label><input type="radio" name="q43" value="Hoşlanmam"> Hoşlanmam</label><br>
+               <label><input type="radio" name="q43" value="Farketmez"> Farketmez</label><br>
+               <label><input type="radio" name="q43" value="Hoşlanırım"> Hoşlanırım</label>
+           </div>
+       </div>
+ <div class="question">
+           <p>43- Masraflara ait hesap kayıtları tutmak</p>
+           <div class="answer">
+               <label><input type="radio" name="q44" value="Hoşlanmam"> Hoşlanmam</label><br>
+               <label><input type="radio" name="q44" value="Farketmez"> Farketmez</label><br>
+               <label><input type="radio" name="q44" value="Hoşlanırım"> Hoşlanırım</label>
+           </div>
+       </div>
+ <div class="question">
+           <p>44- Bir bandoda çalmak</p>
+           <div class="answer">
+               <label><input type="radio" name="q45" value="Hoşlanmam"> Hoşlanmam</label><br>
+               <label><input type="radio" name="q45" value="Farketmez"> Farketmez</label><br>
+               <label><input type="radio" name="q45" value="Hoşlanırım"> Hoşlanırım</label>
+           </div>
+       </div>
+ <div class="question">
+           <p>45- Bir orkestrada caz müziği çalmak</p>
+           <div class="answer">
+               <label><input type="radio" name="q46" value="Hoşlanmam"> Hoşlanmam</label><br>
+               <label><input type="radio" name="q46" value="Farketmez"> Farketmez</label><br>
+               <label><input type="radio" name="q46" value="Hoşlanırım"> Hoşlanırım</label>
+           </div>
+       </div>
+ <div class="question">
+           <p>46- Bir grup veya kulüp için bütçe hazırlamak</p>
+           <div class="answer">
+               <label><input type="radio" name="q47" value="Hoşlanmam"> Hoşlanmam</label><br>
+               <label><input type="radio" name="q47" value="Farketmez"> Farketmez</label><br>
+               <label><input type="radio" name="q47" value="Hoşlanırım"> Hoşlanırım</label>
+           </div>
+       </div>
+ <div class="question">
+           <p>47- Depremin nedenlerini araştırmak</p>
+           <div class="answer">
+               <label><input type="radio" name="q48" value="Hoşlanmam"> Hoşlanmam</label><br>
+               <label><input type="radio" name="q48" value="Farketmez"> Farketmez</label><br>
+               <label><input type="radio" name="q48" value="Hoşlanırım"> Hoşlanırım</label>
+           </div>
+       </div>
+ <div class="question">
+           <p>48- Ünlü bir bilim insanının dersine katılmak</p>
+           <div class="answer">
+               <label><input type="radio" name="q49" value="Hoşlanmam"> Hoşlanmam</label><br>
+               <label><input type="radio" name="q49" value="Farketmez"> Farketmez</label><br>
+               <label><input type="radio" name="q49" value="Hoşlanırım"> Hoşlanırım</label>
+           </div>
+       </div>
+ <div class="question">
+           <p>49- Bir proje üzerinde başkaları ile beraber çalışmak</p>
+           <div class="answer">
+               <label><input type="radio" name="q50" value="Hoşlanmam"> Hoşlanmam</label><br>
+               <label><input type="radio" name="q50" value="Farketmez"> Farketmez</label><br>
+               <label><input type="radio" name="q50" value="Hoşlanırım"> Hoşlanırım</label>
+           </div>
+       </div>
+ <div class="question">
+           <p>50- Bir sinema filmi senaryosu yazmak</p>
+           <div class="answer">
+               <label><input type="radio" name="q51" value="Hoşlanmam"> Hoşlanmam</label><br>
+               <label><input type="radio" name="q51" value="Farketmez"> Farketmez</label><br>
+               <label><input type="radio" name="q51" value="Hoşlanırım"> Hoşlanırım</label>
+           </div>
+       </div>
+ <div class="question">
+           <p>51- Şirket hakkındaki şikayetleri konusunda işçilerle röportaj yapmak</p>
+           <div class="answer">
+               <label><input type="radio" name="q52" value="Hoşlanmam"> Hoşlanmam</label><br>
+               <label><input type="radio" name="q52" value="Farketmez"> Farketmez</label><br>
+               <label><input type="radio" name="q52" value="Hoşlanırım"> Hoşlanırım</label>
+           </div>
+       </div>
+ <div class="question">
+           <p>52- Mobilya yapmak</p>
+           <div class="answer">
+               <label><input type="radio" name="q53" value="Hoşlanmam"> Hoşlanmam</label><br>
+               <label><input type="radio" name="q53" value="Farketmez"> Farketmez</label><br>
+               <label><input type="radio" name="q53" value="Hoşlanırım"> Hoşlanırım</label>
+           </div>
+       </div>
+ <div class="question">
+           <p>53- Değerli taşları kesmeyi ve parlatmayı öğrenmek</p>
+           <div class="answer">
+               <label><input type="radio" name="q54" value="Hoşlanmam"> Hoşlanmam</label><br>
+               <label><input type="radio" name="q54" value="Farketmez"> Farketmez</label><br>
+               <label><input type="radio" name="q54" value="Hoşlanırım"> Hoşlanırım</label>
+           </div>
+       </div>
+ <div class="question">
+           <p>54- Yaralı bir insana ilk yardım yapmak</p>
+           <div class="answer">
+               <label><input type="radio" name="q55" value="Hoşlanmam"> Hoşlanmam</label><br>
+               <label><input type="radio" name="q55" value="Farketmez"> Farketmez</label><br>
+               <label><input type="radio" name="q55" value="Hoşlanırım"> Hoşlanırım</label>
+           </div>
+       </div>
+ <div class="question">
+           <p>55- Yerel bir radyo istasyonunda çalınması için müzik parçaları seçmek</p>
+           <div class="answer">
+               <label><input type="radio" name="q56" value="Hoşlanmam"> Hoşlanmam</label><br>
+               <label><input type="radio" name="q56" value="Farketmez"> Farketmez</label><br>
+               <label><input type="radio" name="q56" value="Hoşlanırım"> Hoşlanırım</label>
+           </div>
+       </div>
+ <div class="question">
+           <p>56- İl genel meclisinde çalışmak</p>
+           <div class="answer">
+               <label><input type="radio" name="q57" value="Hoşlanmam"> Hoşlanmam</label><br>
+               <label><input type="radio" name="q57" value="Farketmez"> Farketmez</label><br>
+               <label><input type="radio" name="q57" value="Hoşlanırım"> Hoşlanırım</label>
+           </div>
+       </div>
+ <div class="question">
+           <p>57- Mali raporları hazırlamak ve yorumlamak</p>
+           <div class="answer">
+               <label><input type="radio" name="q58" value="Hoşlanmam"> Hoşlanmam</label><br>
+               <label><input type="radio" name="q58" value="Farketmez"> Farketmez</label><br>
+               <label><input type="radio" name="q58" value="Hoşlanırım"> Hoşlanırım</label>
+           </div>
+       </div>
+ <div class="question">
+           <p>58- Tehlikedeki bir insana yardım etmeye çalışmak</p>
+           <div class="answer">
+               <label><input type="radio" name="q59" value="Hoşlanmam"> Hoşlanmam</label><br>
+               <label><input type="radio" name="q59" value="Farketmez"> Farketmez</label><br>
+               <label><input type="radio" name="q59" value="Hoşlanırım"> Hoşlanırım</label>
+           </div>
+       </div>
+ <div class="question">
+           <p>59- Elektronik alet çalıştırmak</p>
+           <div class="answer">
+               <label><input type="radio" name="q60" value="Hoşlanmam"> Hoşlanmam</label><br>
+               <label><input type="radio" name="q60" value="Farketmez"> Farketmez</label><br>
+               <label><input type="radio" name="q60" value="Hoşlanırım"> Hoşlanırım</label>
+           </div>
+       </div>
+<div class="question">
+           <p>60- Çocuklara nasıl oyun oynanacağını veya spor yapılacağını göstermek</p>
+           <div class="answer">
+               <label><input type="radio" name="q61" value="Hoşlanmam"> Hoşlanmam</label><br>
+               <label><input type="radio" name="q61" value="Farketmez"> Farketmez</label><br>
+               <label><input type="radio" name="q61" value="Hoşlanırım"> Hoşlanırım</label>
+           </div>
+       </div>
+<div class="question">
+           <p>61- Bir ustayı televizyon tamir ederken seyretmek</p>
+           <div class="answer">
+               <label><input type="radio" name="q62" value="Hoşlanmam"> Hoşlanmam</label><br>
+               <label><input type="radio" name="q62" value="Farketmez"> Farketmez</label><br>
+               <label><input type="radio" name="q62" value="Hoşlanırım"> Hoşlanırım</label>
+           </div>
+       </div>
+<div class="question">
+           <p>62- Bir magazin hikayesini anlatan çizimler yapmak</p>
+           <div class="answer">
+               <label><input type="radio" name="q63" value="Hoşlanmam"> Hoşlanmam</label><br>
+               <label><input type="radio" name="q63" value="Farketmez"> Farketmez</label><br>
+               <label><input type="radio" name="q63" value="Hoşlanırım"> Hoşlanırım</label>
+           </div>
+       </div>
+<div class="question">
+           <p>63- Ziyaretçilere yol göstermek</p>
+           <div class="answer">
+               <label><input type="radio" name="q64" value="Hoşlanmam"> Hoşlanmam</label><br>
+               <label><input type="radio" name="q64" value="Farketmez"> Farketmez</label><br>
+               <label><input type="radio" name="q64" value="Hoşlanırım"> Hoşlanırım</label>
+           </div>
+       </div>
+<div class="question">
+           <p>64- Diğer insanların bir problemin çözülebileceğine nasıl inandıklarını öğrenmek</p>
+           <div class="answer">
+               <label><input type="radio" name="q65" value="Hoşlanmam"> Hoşlanmam</label><br>
+               <label><input type="radio" name="q65" value="Farketmez"> Farketmez</label><br>
+               <label><input type="radio" name="q65" value="Hoşlanırım"> Hoşlanırım</label>
+           </div>
+       </div>
+<div class="question">
+           <p>65- Bir sergiye gezi düzenlemek</p>
+           <div class="answer">
+               <label><input type="radio" name="q66" value="Hoşlanmam"> Hoşlanmam</label><br>
+               <label><input type="radio" name="q66" value="Farketmez"> Farketmez</label><br>
+               <label><input type="radio" name="q66" value="Hoşlanırım"> Hoşlanırım</label>
+           </div>
+       </div>
+<div class="question">
+           <p>66- Uyuşturucu kullanan insanlara danışmanlık yapmak</p>
+           <div class="answer">
+               <label><input type="radio" name="q67" value="Hoşlanmam"> Hoşlanmam</label><br>
+               <label><input type="radio" name="q67" value="Farketmez"> Farketmez</label><br>
+               <label><input type="radio" name="q67" value="Hoşlanırım"> Hoşlanırım</label>
+           </div>
+       </div>
+<div class="question">
+           <p>67- İş gazeteleri veya dergileri okumak</p>
+           <div class="answer">
+               <label><input type="radio" name="q68" value="Hoşlanmam"> Hoşlanmam</label><br>
+               <label><input type="radio" name="q68" value="Farketmez"> Farketmez</label><br>
+               <label><input type="radio" name="q68" value="Hoşlanırım"> Hoşlanırım</label>
+           </div>
+       </div>
+<div class="question">
+           <p>68- Yıldızların oluşumunu öğrenmek</p>
+           <div class="answer">
+               <label><input type="radio" name="q69" value="Hoşlanmam"> Hoşlanmam</label><br>
+               <label><input type="radio" name="q69" value="Farketmez"> Farketmez</label><br>
+               <label><input type="radio" name="q69" value="Hoşlanırım"> Hoşlanırım</label>
+           </div>
+       </div>
+<div class="question">
+           <p>69- Taksit ödemelerini tahsil etmek</p>
+           <div class="answer">
+               <label><input type="radio" name="q70" value="Hoşlanmam"> Hoşlanmam</label><br>
+               <label><input type="radio" name="q70" value="Farketmez"> Farketmez</label><br>
+               <label><input type="radio" name="q70" value="Hoşlanırım"> Hoşlanırım</label>
+           </div>
+       </div>
+<div class="question">
+           <p>70- Bir slayt veya film projektörünü çalıştırmak</p>
+           <div class="answer">
+               <label><input type="radio" name="q71" value="Hoşlanmam"> Hoşlanmam</label><br>
+               <label><input type="radio" name="q71" value="Farketmez"> Farketmez</label><br>
+               <label><input type="radio" name="q71" value="Hoşlanırım"> Hoşlanırım</label>
+           </div>
+       </div>
+<div class="question">
+           <p>71- Kelebekleri gözlemlemek ve sınıflandırmak</p>
+           <div class="answer">
+               <label><input type="radio" name="q72" value="Hoşlanmam"> Hoşlanmam</label><br>
+               <label><input type="radio" name="q72" value="Farketmez"> Farketmez</label><br>
+               <label><input type="radio" name="q72" value="Hoşlanırım"> Hoşlanırım</label>
+           </div>
+       </div>
+<div class="question">
+           <p>72- Metal bir heykel tasarlamak</p>
+           <div class="answer">
+               <label><input type="radio" name="q73" value="Hoşlanmam"> Hoşlanmam</label><br>
+               <label><input type="radio" name="q73" value="Farketmez"> Farketmez</label><br>
+               <label><input type="radio" name="q73" value="Hoşlanırım"> Hoşlanırım</label>
+           </div>
+       </div>
+<div class="question">
+           <p>73- İnsanlara kanuni doğruları açıklamak</p>
+           <div class="answer">
+               <label><input type="radio" name="q74" value="Hoşlanmam"> Hoşlanmam</label><br>
+               <label><input type="radio" name="q74" value="Farketmez"> Farketmez</label><br>
+               <label><input type="radio" name="q74" value="Hoşlanırım"> Hoşlanırım</label>
+           </div>
+       </div>
+<div class="question">
+           <p>74- Kısa hikayeler yazmak</p>
+           <div class="answer">
+               <label><input type="radio" name="q75" value="Hoşlanmam"> Hoşlanmam</label><br>
+               <label><input type="radio" name="q75" value="Farketmez"> Farketmez</label><br>
+               <label><input type="radio" name="q75" value="Hoşlanırım"> Hoşlanırım</label>
+           </div>
+       </div>
+<div class="question">
+           <p>75- İnsanların mali kararlar vermelerine yardımcı olmak</p>
+           <div class="answer">
+               <label><input type="radio" name="q76" value="Hoşlanmam"> Hoşlanmam</label><br>
+               <label><input type="radio" name="q76" value="Farketmez"> Farketmez</label><br>
+               <label><input type="radio" name="q76" value="Hoşlanırım"> Hoşlanırım</label>
+           </div>
+       </div>
+<div class="question">
+           <p>76- Gelir vergisi kazancını düzenlemek</p>
+           <div class="answer">
+               <label><input type="radio" name="q77" value="Hoşlanmam"> Hoşlanmam</label><br>
+               <label><input type="radio" name="q77" value="Farketmez"> Farketmez</label><br>
+               <label><input type="radio" name="q77" value="Hoşlanırım"> Hoşlanırım</label>
+           </div>
+       </div>
+<div class="question">
+           <p>77- Sertifika, plaket veya taktir belgesi kazanmak</p>
+           <div class="answer">
+               <label><input type="radio" name="q78" value="Hoşlanmam"> Hoşlanmam</label><br>
+               <label><input type="radio" name="q78" value="Farketmez"> Farketmez</label><br>
+               <label><input type="radio" name="q78" value="Hoşlanırım"> Hoşlanırım</label>
+           </div>
+       </div>
+<div class="question">
+           <p>78- Tiyatro oyunu, müzikaller gibi sanatsal etkinliklerin eleştirilerini yazmak</p>
+           <div class="answer">
+               <label><input type="radio" name="q79" value="Hoşlanmam"> Hoşlanmam</label><br>
+               <label><input type="radio" name="q79" value="Farketmez"> Farketmez</label><br>
+               <label><input type="radio" name="q79" value="Hoşlanırım"> Hoşlanırım</label>
+           </div>
+       </div>
+<div class="question">
+           <p>79- Aylık bütçe planı yapmak</p>
+           <div class="answer">
+               <label><input type="radio" name="q80" value="Hoşlanmam"> Hoşlanmam</label><br>
+               <label><input type="radio" name="q80" value="Farketmez"> Farketmez</label><br>
+               <label><input type="radio" name="q80" value="Hoşlanırım"> Hoşlanırım</label>
+           </div>
+       </div>
+<div class="question">
+           <p>80- Bir havuz veya gölde yabani hayatı araştırmak</p>
+           <div class="answer">
+               <label><input type="radio" name="q81" value="Hoşlanmam"> Hoşlanmam</label><br>
+               <label><input type="radio" name="q81" value="Farketmez"> Farketmez</label><br>
+               <label><input type="radio" name="q81" value="Hoşlanırım"> Hoşlanırım</label>
+           </div>
+       </div>
+<div class="question">
+           <p>81- Bir tiyatro oyununda rol almak</p>
+           <div class="answer">
+               <label><input type="radio" name="q82" value="Hoşlanmam"> Hoşlanmam</label><br>
+               <label><input type="radio" name="q82" value="Farketmez"> Farketmez</label><br>
+               <label><input type="radio" name="q82" value="Hoşlanırım"> Hoşlanırım</label>
+           </div>
+       </div>
+<div class="question">
+           <p>82- Bir resim çerçevesi yapmak</p>
+           <div class="answer">
+               <label><input type="radio" name="q83" value="Hoşlanmam"> Hoşlanmam</label><br>
+               <label><input type="radio" name="q83" value="Farketmez"> Farketmez</label><br>
+               <label><input type="radio" name="q83" value="Hoşlanırım"> Hoşlanırım</label>
+           </div>
+       </div>
+<div class="question">
+           <p>83- İş gezilerine çıkmak</p>
+           <div class="answer">
+               <label><input type="radio" name="q84" value="Hoşlanmam"> Hoşlanmam</label><br>
+               <label><input type="radio" name="q84" value="Farketmez"> Farketmez</label><br>
+               <label><input type="radio" name="q84" value="Hoşlanırım"> Hoşlanırım</label>
+           </div>
+       </div>
+<div class="question">
+           <p>84- Orman yangınları için gözetleme yapmak</p>
+           <div class="answer">
+               <label><input type="radio" name="q85" value="Hoşlanmam"> Hoşlanmam</label><br>
+               <label><input type="radio" name="q85" value="Farketmez"> Farketmez</label><br>
+               <label><input type="radio" name="q85" value="Hoşlanırım"> Hoşlanırım</label>
+           </div>
+       </div>
+<div class="question">
+           <p>85- Yeni alışveriş merkezinin tanıtımını yapmak</p>
+           <div class="answer">
+               <label><input type="radio" name="q86" value="Hoşlanmam"> Hoşlanmam</label><br>
+               <label><input type="radio" name="q86" value="Farketmez"> Farketmez</label><br>
+               <label><input type="radio" name="q86" value="Hoşlanırım"> Hoşlanırım</label>
+           </div>
+       </div>
+<div class="question">
+           <p>86- Bir muhasebecilik sistemi kurmak</p>
+           <div class="answer">
+               <label><input type="radio" name="q87" value="Hoşlanmam"> Hoşlanmam</label><br>
+               <label><input type="radio" name="q87" value="Farketmez"> Farketmez</label><br>
+               <label><input type="radio" name="q87" value="Hoşlanırım"> Hoşlanırım</label>
+           </div>
+       </div>
+<div class="question">
+           <p>87- Arkadaşlar arasındaki bir tartışmayı yatıştırmak</p>
+           <div class="answer">
+               <label><input type="radio" name="q88" value="Hoşlanmam"> Hoşlanmam</label><br>
+               <label><input type="radio" name="q88" value="Farketmez"> Farketmez</label><br>
+               <label><input type="radio" name="q88" value="Hoşlanırım"> Hoşlanırım</label>
+           </div>
+       </div>
+<div class="question">
+           <p>88- Birine önemli bir karar vermesinde yardım etmek</p>
+           <div class="answer">
+               <label><input type="radio" name="q89" value="Hoşlanmam"> Hoşlanmam</label><br>
+               <label><input type="radio" name="q89" value="Farketmez"> Farketmez</label><br>
+               <label><input type="radio" name="q89" value="Hoşlanırım"> Hoşlanırım</label>
+           </div>
+       </div>
+<div class="question">
+           <p>89- Taşıma için nakil maliyetlerini hesaplamak</p>
+           <div class="answer">
+               <label><input type="radio" name="q90" value="Hoşlanmam"> Hoşlanmam</label><br>
+               <label><input type="radio" name="q90" value="Farketmez"> Farketmez</label><br>
+               <label><input type="radio" name="q90" value="Hoşlanırım"> Hoşlanırım</label>
+           </div>
+       </div>
+
+
+
+            <button type="submit">Anketi Gönder</button>
+        </form>
+    </div>
+</body>
+</html>

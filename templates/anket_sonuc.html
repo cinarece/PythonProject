@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meslek Tercihi Sonucu</title>
+    <style>
+        /* Genel stil */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f9;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        /* Sonuçlar ve anket formu */
+        #anketForm {
+            display: block;
+        }
+
+        #sonucEkrani {
+            display: none;
+        }
+
+        /* En uygun meslek vurgusu için stil */
+        .highlight {
+            background-color: #dff0d8; /* Açık yeşil arka plan */
+            font-weight: bold;
+            padding: 5px;
+        }
+
+        /* Liste düzeni */
+        #sonuclar {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #sonuclar li {
+            margin-bottom: 10px;
+        }
+
+        /* Buton stili */
+        button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <h1>Meslek Tercihi Sonucu</h1>
+
+    <!-- Sonuç ekranı -->
+    <div id="sonucEkrani">
+        <h2>Meslek Gruplarınız:</h2>
+        <ul id="sonuclar">
+            <!-- Sonuçlar burada dinamik olarak gösterilecek -->
+        </ul>
+
+        <h2>En Uygun Meslek Grubu: <span id="en-uygun-meslek"></span></h2>
+        <p id="meslek-detaylari"></p>
+
+        <!-- Yeni buton: tekrar formu göster -->
+        <button onclick="formuGoster()">Tekrar Formu Görüntüle</button>
+    </div>
+
+    <!-- Anket Formu Başlangıcı -->
+    <form id="anketForm">
+        <div class="soru">
+            <p>1. Bilimsel araştırmalara ilgi duyar mısınız?</p>
+            <input type="radio" name="Araştırıcı" value="Hoşlanırım"> Hoşlanırım
+            <input type="radio" name="Araştırıcı" value="Hoşlanmam"> Hoşlanmam
+        </div>
+
+        <div class="soru">
+            <p>2. Sanatla uğraşmak hoşunuza gider mi?</p>
+            <input type="radio" name="Sanatsal" value="Hoşlanırım"> Hoşlanırım
+            <input type="radio" name="Sanatsal" value="Hoşlanmam"> Hoşlanmam
+        </div>
+
+        <div class="soru">
+            <p>3. İnsanlarla iletişim kurmayı sever misiniz?</p>
+            <input type="radio" name="Sosyal" value="Hoşlanırım"> Hoşlanırım
+            <input type="radio" name="Sosyal" value="Hoşlanmam"> Hoşlanmam
+        </div>
+
+        <div class="soru">
+            <p>4. Kendi işinizi kurmak ister misiniz?</p>
+            <input type="radio" name="Girişimci" value="Hoşlanırım"> Hoşlanırım
+            <input type="radio" name="Girişimci" value="Hoşlanmam"> Hoşlanmam
+        </div>
+
+        <div class="soru">
+            <p>5. Yaratıcı işler yapmayı tercih eder misiniz?</p>
+            <input type="radio" name="Geleneksel" value="Hoşlanırım"> Hoşlanırım
+            <input type="radio" name="Geleneksel" value="Hoşlanmam"> Hoşlanmam
+        </div>
+
+        <div class="soru">
+            <p>6. Pratik çözümler aramayı sever misiniz?</p>
+            <input type="radio" name="Gerçekçi" value="Hoşlanırım"> Hoşlanırım
+            <input type="radio" name="Gerçekçi" value="Hoşlanmam"> Hoşlanmam
+        </div>
+
+        <button type="button" onclick="hesaplaSonuc()">Sonuçları Görüntüle</button>
+    </form>
+    <!-- Anket Formu Sonu -->
+
+    <script>
+
+           // Meslek açıklamaları
+        const meslekAçıklamaları = {
+            "Araştırıcı": "Entelektüel, analitik düşünce yapısına sahip, rasyonel, eleştirel, titiz, sabırlı, yöntemci, bağımsız, popüler olmaktan hoşlanmayan. Biyolog, genetikçi, matematikçi, kimyager, fizikçi, astronot, antropolog, tıp teknisyeni gibi meslekler önerilir.",
+            "Sanatsal": "Heyecan ve coşkuları dengesiz, hayalci, fevri, karmaşık, sezgileri güçlü, bağımsız, duygusal, uyumlu olmayan, duyarlı ve etkileyici. Yazar, ressam, aktör, tiyatro sanatçısı, müzisyen, kompozitör, dekoratör ve mimar gibi meslekler önerilir.",
+            "Sosyal": "Yardımsever, sorumluluk sahibi, sosyal işbirliğine yatkın, empatik, arkadaş canlısı, içten, sabırlı, nazik, anlayışlı. Sosyal hizmet uzmanı, rehabilitasyon danışmanı, psikolog, psikolojik danışman, halkla ilişkiler uzmanı, üniversite öğretim üyesi, öğretmen gibi meslekler önerilir.",
+            "Girişimci": "Dışa dönük, enerjik, kendine güvenli, atılgan, fevri, ikna yeteneği yüksek, sabırsız, meraklı, maceracı, iyimser, sosyal, konuşkan. Satıcı, pazarlamacı, komisyoncu, menajer, politikacı, avukat gibi meslekler önerilir.",
+            "Geleneksel": "Dikkatli, titiz, itaatkar, tutarlı, esnek olmayan, düzenli, sabırlı, vicdanlı, özdenetimli, hayal gücünden yoksun, dengeli. Banka veznedarı, kütüphaneci, daktilograf, postacı, muhasebeci, kitapçı, finans elemanı gibi meslekler önerilir.",
+            "Gerçekçi": "Sabırlı ve hoşgörülü, pratik, maddeci, erkeksi, antisosyal, uyumlu, içten, doğal, sabırlı, iç görüleri ve başarma güdüleri fazla. Otomobil tamircisi, araç teknisyeni, elektrikçi, mühendis, ziraat ile ilgili meslekler, beden eğitimi öğretmeni gibi meslekler önerilir."
+        };
+
+        let meslekPuanlari = {
+            "Araştırıcı": 0,
+            "Sanatsal": 0,
+            "Sosyal": 0,
+            "Girişimci": 0,
+            "Geleneksel": 0,
+            "Gerçekçi": 0
+        };
+
+        function hesaplaSonuc() {
+            let form = document.forms['anketForm'];
+            let herhangiBirSecim = false;
+
+            for (let i = 0; i < form.length; i++) {
+                let secim = form[i];
+                if (secim.checked) {
+                    herhangiBirSecim = true;
+                    if (secim.value === "Hoşlanırım") {
+                        meslekPuanlari[secim.name]++;
+                    }
+                }
+            }
+
+            if (!herhangiBirSecim) {
+                alert("Lütfen en az bir soruya cevap verin!");
+                return;
+            }
+
+            let sonucListe = document.getElementById("sonuclar");
+            sonucListe.innerHTML = '';
+            for (let meslek in meslekPuanlari) {
+                let li = document.createElement("li");
+                li.innerHTML = `<strong>${meslek}</strong>: ${meslekPuanlari[meslek]} puan<br>
+                                <em>${meslekAçıklamaları[meslek]}</em>`;
+                sonucListe.appendChild(li);
+            }
+
+            let enUygunMeslek = Object.keys(meslekPuanlari).reduce((a, b) => meslekPuanlari[a] > meslekPuanlari[b] ? a : b);
+            document.getElementById("en-uygun-meslek").textContent = enUygunMeslek;
+            document.getElementById("meslek-detaylari").textContent = meslekAçıklamaları[enUygunMeslek];
+
+            let sonucItems = sonucListe.getElementsByTagName("li");
+            for (let item of sonucItems) {
+                if (item.innerHTML.includes(`<strong>${enUygunMeslek}</strong>`)) {
+                    item.classList.add("highlight");
+                }
+            }
+
+            document.getElementById("anketForm").style.display = 'none';
+            document.getElementById("sonucEkrani").style.display = 'block';
+        }
+
+        function formuGoster() {
+            document.getElementById("anketForm").style.display = 'block';
+            document.getElementById("sonucEkrani").style.display = 'none';
+        }
+    </script>
+</body>
+</html>
